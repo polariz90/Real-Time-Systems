@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.helloworld"
+    android:versionCode="1"
+    android:versionName="1.0" >
+    <uses-permission android:name="android.permission.INTERNET"/>
+   
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="21" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/roomba"
+        android:theme="@style/AppTheme" >
+    
+	    <activity android:name="com.example.helloworld.MainActivity"
+	        		android:label="@string/roomba">
+	        
+	        <intent-filter>
+	                <action android:name="android.intent.action.MAIN" />
+	                <category android:name="android.intent.category.LAUNCHER" />
+	            </intent-filter>
+	        
+	    </activity>
+	    
+	    
+	    <activity android:name="com.example.helloworld.Robot_Command"
+	        		android:label="@string/roomba"
+	        		android:parentActivityName="com.example.helloworld.MainActivity" >
+	        
+	        
+	    </activity>
+	    
+	  
+        <service	android:name="com.example.helloworld.TCP_Handler" />
+        
+            		
+    </application>
+</manifest>
